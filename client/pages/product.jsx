@@ -1,3 +1,7 @@
-export default function Product() {
-  return <div>Product page</div>;
+function Product() {
+  return ( 
+  <div>Product page</div>
+  )
 }
+
+export default Product
