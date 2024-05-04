@@ -10,14 +10,23 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+  padding: 10;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 60vw;
   font-family: Gotham, helvetica, arial, sans-serif;
   color: var(--ice);
+
 }
 
 body {
   background: var(--siphon);
+}
+
+.product_list {
+  list-style: none;
 }
 
 .home {
@@ -28,3 +37,65 @@ body {
   height: 100vh;
   margin: 0 auto;
 }
+
+.basket_icon {
+  width: 22px;
+  height: 22px;
+}
+
+.product_title {
+  font-family: Gotham, helvetica, arial, sans-serif;
+  font-size: 40px;
+}
+
+.spec_container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+
+
+.add_button {
+  width: 60vw;
+  height: 8vh;
+  position: relative;
+  /* margin-right: 140px; */
+  border-radius: 10px;
+  border: none;
+  background: #f050f8;
+  color:#100030;
+  margin-top: 10px;
+ 
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.left-content {
+  margin-right: auto;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+
+.quantity_button {
+  margin: 5px;
+}
+
