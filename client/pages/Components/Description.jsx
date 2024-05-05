@@ -4,12 +4,14 @@ function Description() {
   const { products } = db;
 
   return (
-    <section>
+
+    <section className="description-container full-bleed">
       <h2>Description</h2>
       {products.map((product) => {
-        return <p>{product.description}</p>;
+        return <p key={product.id}>{product.description}</p>;
       })}
     </section>
+    
   );
 }
 

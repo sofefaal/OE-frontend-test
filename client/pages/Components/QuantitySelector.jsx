@@ -4,9 +4,10 @@ const db = require("../../../server/db");
 function QuantitySelector({ addToBasket }) {
   const { products } = db;
   const [quantity, setQuantity] = useState(1);
+  const [addedToBasket, setAddedToBasket] = useState(false)
 
   const decreaseQuantity = () => {
-    if (quantity > 1) {
+    if (quantity > 0) {
       setQuantity(quantity - 1);
     }
   };
@@ -16,27 +17,42 @@ function QuantitySelector({ addToBasket }) {
   };
 
   const handleAddToBasket = () => {
+    if (quantity > 0) {
     addToBasket(quantity);
+    setAddedToBasket(true)
+    }
   };
 
-  return (
-    <section className="quantity-selector">
-      <div className="left-content">
-        <h2 className="price_tag">£{products.price}</h2>
-      </div>
-      <div className="right-content">
-        <p>Qty</p>
-        <div className="quantity-controls">
-          <button className="quantity_button" onClick={decreaseQuantity}>-</button>
-           <span>{quantity}</span>
-           <button className="quantity_button" onClick={increaseQuantity}>+</button>
-        </div>
-        <button className="add_button" onClick={handleAddToBasket}>
-          <b>Add to cart</b>
-        </button>
-      </div>
-    </section>
-  );
+ return (
+   <section>
+     {products.map((product) => (
+       <div key={product.id} className="product-container">
+         <div className="left-content">
+          <p className="Qty">Qty</p>
+         </div>
+         <div className="right-content">
+           <h2 className="price_tag">£{(product.price / 100).toFixed(2)}</h2>
+           <div className="quantity-controls">
+             <button className="quantity_button" onClick={decreaseQuantity}>
+               -
+             </button>
+             <span>{quantity}</span>
+             <button className="quantity_button" onClick={increaseQuantity}>
+               +
+             </button>
+           </div>
+         </div>
+
+
+         <div className="add-to-button">
+           <button className="add_button" onClick={handleAddToBasket}>
+            {addedToBasket ? "Added to Basket" : "Add to cart"}
+           </button>
+         </div>
+       </div>
+     ))}
+   </section>
+ );
 }
 
 export default QuantitySelector;

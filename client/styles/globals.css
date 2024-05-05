@@ -1,4 +1,8 @@
 /* Octopus Energy brand colours used in the design */
+/* * {
+  box-sizing: border-box;
+} */
+
 :root {
   --hemocyanin: #180048;
   --ice: #f0ffff;
@@ -11,14 +15,8 @@
 html,
 body {
   padding: 10;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  width: 60vw;
   font-family: Gotham, helvetica, arial, sans-serif;
   color: var(--ice);
-
 }
 
 body {
@@ -48,54 +46,100 @@ body {
   font-size: 40px;
 }
 
-.spec_container {
-  width: 100%;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #000;
-}
-
-.quantity-selector {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  
-}
-
-
 .add_button {
-  width: 60vw;
-  height: 8vh;
-  position: relative;
-  /* margin-right: 140px; */
-  border-radius: 10px;
+  width: 100%;
+
+  border-radius: 6px;
   border: none;
   background: #f050f8;
-  color:#100030;
-  margin-top: 10px;
- 
+  color: #100030;
+  height: 40px;
+  /* margin-top: 10px; */
 }
+
+.add-to-button {
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 100%; */
+  /* width: 400px; */
+  height: 50px;
+}
+
 .quantity-controls {
   display: flex;
   align-items: center;
 }
 
 .left-content {
-  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 .right-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  
+  justify-content: space-between;
 }
 
 .quantity_button {
   margin: 5px;
+}
+
+.Qty {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+.octopus_logo {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
+
+.product-img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background-image: contain;
+}
+
+figure {
+  margin: 0;
+}
+
+.description-container {
+  background-color: #180048;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax #180048;
+  clip-path: inset(0 -100vmax);
+  padding-top: 2px;
+  padding-bottom: 5px;
+}
+
+.footer-container {
+  background-color: #180048;
+  font-size: 10px;
+  color:#a49fc8;
+  line-height: 1.5;
+  padding: 20px;
+  
+}
+
+.footer-full-bleed {
+  box-shadow: 0 0 0 100vmax #180048;
+  clip-path: inset(0 -100vmax);
+}
+
+.spec-container {
+  padding-bottom: 15px;
 }
 
