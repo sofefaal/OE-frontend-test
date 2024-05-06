@@ -15,17 +15,17 @@ function Product() {
     setTotalQuantity(totalQuantity + newQuantity)
   }
 
-  return ( 
-  <div className="content">
-    <Header />
-    <BasketIcon quantity={totalQuantity}/>
-    <ProductImage />
-    <QuantitySelector addToBasket={updateTotalQuantity}/>
-    <Description />
-    <Specification />
-    <Footer />
-  </div>
-  )
+  return (
+    <div className="content">
+      <Header quantity={totalQuantity} />
+      {/* <BasketIcon quantity={totalQuantity}/> */}
+      <ProductImage />
+      <QuantitySelector addToBasket={updateTotalQuantity} />
+      <Description />
+      <Specification />
+      <Footer />
+    </div>
+  );
 }
 
 export default Product

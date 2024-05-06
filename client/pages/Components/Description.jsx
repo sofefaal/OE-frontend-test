@@ -6,9 +6,9 @@ function Description() {
   return (
 
     <section className="description-container full-bleed">
-      <h2>Description</h2>
+      <h2 className="desc-title">Description</h2>
       {products.map((product) => {
-        return <p key={product.id}>{product.description}</p>;
+        return <p className="desc-text"key={product.id}>{product.description}</p>;
       })}
     </section>
     

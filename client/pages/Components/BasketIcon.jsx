@@ -15,7 +15,7 @@ function BasketIcon({quantity}) {
         </svg>
         {quantity > 0 && <span>{quantity}</span>}
 
-        {console.log(`added to basket ${quantity}`)}
+        
         </figure>
     )
 }

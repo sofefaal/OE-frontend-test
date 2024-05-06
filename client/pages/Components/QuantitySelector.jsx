@@ -7,7 +7,7 @@ function QuantitySelector({ addToBasket }) {
   const [addedToBasket, setAddedToBasket] = useState(false)
 
   const decreaseQuantity = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
@@ -33,11 +33,11 @@ function QuantitySelector({ addToBasket }) {
          <div className="right-content">
            <h2 className="price_tag">£{(product.price / 100).toFixed(2)}</h2>
            <div className="quantity-controls">
-             <button className="quantity_button" onClick={decreaseQuantity}>
+             <button className="quantity_button minus-disabled" onClick={decreaseQuantity}>
                -
              </button>
              <span>{quantity}</span>
-             <button className="quantity_button" onClick={increaseQuantity}>
+             <button className="quantity_button " onClick={increaseQuantity}>
                +
              </button>
            </div>

@@ -13,7 +13,7 @@ function ProductImage() {
                         alt={product.description}
                       ></img>
                       <h1 className="product_title">{product.name}</h1>
-                      <p>
+                      <p className="product-quantity">
                         {product.power} // Packet of {product.quantity}
                       </p>
                       </figure>  
