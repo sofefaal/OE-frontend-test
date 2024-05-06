@@ -1,6 +1,11 @@
 import {useState} from "react"
 
+//This component will show the user the quantity of items once they have added the item in the basket with their desired quantity.
+
 function BasketIcon({quantity}) {
+
+//useState used to allow the state of the component to change once the items have been added to the basket.
+    
     const [inputQuantity, setInputQuantity] = useState(0);
 
     const updateQuantity = (newQuantity) => {

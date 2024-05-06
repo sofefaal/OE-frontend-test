@@ -2,6 +2,11 @@ import { useState } from "react";
 const db = require("../../../server/db");
 
 function QuantitySelector({ addToBasket }) {
+
+//this component is using useState, allows the user to select the quantity, it prevents the user to add 0 items into the basket
+//handleAddToBasket is a event listener, once the user has clicked on the add to cart button, it will add the items into the basket 
+//there is also logic added to the add to cart button, if there is less than 1 item, the button will remain to say "add to cart"
+
   const { products } = db;
   const [quantity, setQuantity] = useState(1);
   const [addedToBasket, setAddedToBasket] = useState(false)
